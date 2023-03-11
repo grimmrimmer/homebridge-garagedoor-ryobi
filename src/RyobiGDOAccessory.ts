@@ -203,7 +203,7 @@ export class RyobiGDOAccessory {
       this.logger.debug(`Polling state of ${this.ryobi_device.name}`);
       const status = await this.ryobi.getStatus(this.ryobi_device);
       this.updateContext();
-      this.logger.info(`${this.ryobi_device.name}: ${status} (${state})`);
+      this.logger.debug(`${this.ryobi_device.name}: ${status} (${state})`);
 
       const { garageDoorService } = this;
       if (!garageDoorService) {
